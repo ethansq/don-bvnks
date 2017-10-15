@@ -1,0 +1,69 @@
+.home.container {
+	width:80em;
+	margin:0 auto;
+	margin-top:32px;
+	text-align:center;
+
+	.video {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.header {
+		font-size:26px;
+		font-weight:400;
+		margin-bottom:16px;
+	}
+
+	.description {
+		font-size:20px;
+		font-weight:400;
+		margin-bottom:32px;
+	}
+
+	.callout-wrapper {
+		text-align:center;
+		margin-top:16px;
+
+		.callouts {
+			margin-top:12px;
+			margin-bottom:24px;
+
+			.label {
+				font-size:20px;
+			}
+
+			.callout-pill-wrapper {
+				display:inline-block;
+				text-decoration:none;
+				text-transform:uppercase;
+
+				div {
+					font-size:16px;
+					color:#fff;
+					padding:14px 20px;
+					background:#000;
+
+					&:hover {
+						color:#000;
+						background:#fff;
+					}
+				}
+
+				&:not(:last-child) {
+					margin-right:10px;
+				}
+			}
+		}
+	}
+}

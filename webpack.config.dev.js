@@ -33,6 +33,10 @@ module.exports = {
         options: {
           name: 'fonts/[name].[ext]',
         }
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       }
     ]
   },
