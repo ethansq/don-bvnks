@@ -1,0 +1,55 @@
+$navbar-height: 54px;
+
+#nav-bar {
+	background:rgba(0,0,0,0.6);
+	position:fixed;
+	width:100%;
+	height:auto;
+	z-index:5;
+
+	.padding-wrapper {
+		padding:12px;
+		overflow:hidden;
+	}
+
+	.icon {
+		float:left;
+
+		img {
+			vertical-align:top;
+			width:$navbar-height;
+			height:$navbar-height;
+		}
+	}
+
+	.nav {
+		float:right;
+		height:$navbar-height;
+
+		.pill {
+			line-height:$navbar-height;
+			text-transform:uppercase;
+			width:auto;
+			height:auto;
+			display:inline-block;
+
+			font-size:14px;
+			color:#fff;
+
+			a {
+				color:#fff;
+				&:hover {
+					color:#000;
+				}
+			}
+
+			&:not(:last-child) {
+				margin-right:12px;
+			}
+			&:last-child {
+				border-left:2px rgba(255,255,255,0.5) solid;
+				padding-left:12px;
+			}
+		}
+	}
+}

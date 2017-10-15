@@ -22,6 +22,17 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: 'style-loader!css-loader!sass-loader?sourceMap'
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'url-loader?limit=8192'
+      },
+      {
+        test: /\.(ttf|eot|woff|woff2|svg)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[ext]',
+        }
       }
     ]
   },

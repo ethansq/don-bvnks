@@ -1,5 +1,13 @@
-$var: #efefef;
+$var: #FAFAFA;
 
-body {
-  background: $var;
+body, html {
+	overflow-x:hidden;
+	background: $var;
+	margin:0px;
+	margin-top:0px !important;
+	padding:0px;
 }
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import 'contact', 'home', 'navigationbar', 'jumbotron';
