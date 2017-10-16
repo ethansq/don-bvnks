@@ -4,6 +4,7 @@ import { browserHistory } from 'react-router';
 import NavigationBar from '../components/navigation_bar';
 import Jumbotron from '../components/jumbotron';
 import ContentMain from '../components/content_home';
+import Footer from '../components/footer';
 
 export default class Home extends React.Component {
     componentDidMount() {
@@ -16,6 +17,7 @@ export default class Home extends React.Component {
                 <NavigationBar />
                 <Jumbotron />
                 <ContentMain />
+                <Footer />
             </div>
         );
     }

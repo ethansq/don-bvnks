@@ -6,5 +6,26 @@
 		"Apple": "https://www.apple.com/ca/music/",
 		"Soundcloud": "https://soundcloud.com/",
 		"Google Play": "https://google.com/"
+	},
+	"navLinks": {
+
+	},
+	"footerLinks": {
+		"News": "News",
+		"Events": "Events",
+		"Photos": "Photos",
+		"Media": "Media",
+		"Merch": "Merch",
+		"LOGIN / REGISTER": "LOGIN / REGISTER"
+	},
+	"socialMediaLinks": {
+		"Facebook": "link_to_fb",
+		"Twitter": "link_to_twit",
+		"Instagram": "link_to_insta",
+		"Google+": "link_to_goog",
+		"YouTube": "link_to_yt",
+		"Snapchat": "link_to_snap",
+		"SoundCloud": "link_to_sc",
+		"Spotify": "link_to_spotif"
 	}
 }

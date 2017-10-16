@@ -1,0 +1,99 @@
+footer {
+	background:rgba(0,0,0,0.6);
+	padding:32px 48px;
+	overflow:hidden;
+	position:relative;
+
+	.brand {
+		cursor:default;
+		display:flex;
+		align-items:center;
+		height:100%;
+		position:absolute;
+		top:0px;
+		left:32px;
+		color:#fff;
+		font-size:48px;
+		float:left;
+	}
+
+	.content {
+		float:right;
+		text-align:right;
+	}
+
+	.links {
+		a {
+			font-size:18px;
+			text-decoration:none;
+			text-transform:uppercase;
+
+			&:hover {
+				opacity:0.4;
+			}
+
+			&:not(:last-child) {
+				margin-right:32px;
+			}
+		}
+	}
+
+	.subscribe {
+		padding-top:16px;
+
+		label {
+			display:inline-block;
+			color:#fff;
+			font-size:18px;
+			text-transform:uppercase;
+			margin-right:16px;
+		}
+
+		form {
+			border-bottom:1px rgba(255,255,255,0.3) solid;
+			display:inline-block;
+
+			input {
+				color:#fff;
+				font-size:18px;
+				background:0 0;
+				padding:0px;
+				border:none;
+				line-height:28px;
+			}
+
+			button {
+				margin-left:8px;
+				vertical-align:bottom;
+				-webkit-appearance:button;
+				cursor:pointer;
+				width:42px;
+				height:28px;
+				border:none;
+				background:url('../res/submit_arrow.png') no-repeat center center/42px auto;
+				
+				&:hover {
+					opacity:0.4;
+				}
+			}
+		}
+	}
+
+	.social-media-links {
+		padding-top:64px;
+
+		.icon-anchor {
+			margin-left:60px;
+
+			&:hover {
+				opacity:0.4;
+			}
+		}
+
+		.icon-wrapper {
+			display:inline-block;
+			text-align:center;
+			cursor:pointer;
+		}
+	}
+}
