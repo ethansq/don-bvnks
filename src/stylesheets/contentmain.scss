@@ -1,10 +1,28 @@
 .home.container {
 	width:80em;
 	margin:0 auto;
-	margin-top:32px;
-	margin-bottom:32px;
+	padding-top:32px;
+	padding-bottom:32px;
 	text-align:center;
 
+	.header {
+		font-size:26px;
+		font-weight:400;
+		margin-bottom:16px;
+	}
+
+	.description {
+		font-size:20px;
+		font-weight:400;
+		margin-bottom:32px;
+	}
+
+	> section:not(:last-child) {
+		margin-bottom:64px;
+	}
+}
+
+#video-feature {
 	.video {
 		position: relative;
 		padding-bottom: 56.25%; /* 16:9 */
@@ -18,18 +36,6 @@
 			width: 100%;
 			height: 100%;
 		}
-	}
-
-	.header {
-		font-size:26px;
-		font-weight:400;
-		margin-bottom:16px;
-	}
-
-	.description {
-		font-size:20px;
-		font-weight:400;
-		margin-bottom:32px;
 	}
 
 	.callout-wrapper {
@@ -50,19 +56,60 @@
 				text-transform:uppercase;
 
 				div {
+					transition:background 0.2s ease;
+					transition:color 0.2s ease;
+					transition:opacity 0.2s ease;
 					font-size:16px;
 					color:#fff;
 					padding:14px 20px;
 					background:#000;
 
 					&:hover {
-						color:#000;
-						background:#fff;
+						background:#777;
 					}
 				}
 
 				&:not(:last-child) {
 					margin-right:10px;
+				}
+			}
+		}
+	}
+}
+
+#bookings {
+	.tour-date-wrapper {
+		font-size:22px;
+
+		&:not(:last-child) {
+			margin-bottom:26px;
+		}
+
+		.tour-name {
+			text-transform:uppercase;
+		}
+
+		.tour-callouts {
+			margin-top:6px;
+
+			.tour-callout {
+				div {
+					display:inline-block;
+					transition:background 0.2s ease;
+					transition:color 0.2s ease;
+					transition:opacity 0.2s ease;
+					font-size:14px;
+					color:#fff;
+					padding:4px 14px;
+					background:#000;
+
+					&:hover {
+						background:#777;
+					}
+				}
+
+				&:not(:last-child) {
+					margin-right:8px;
 				}
 			}
 		}

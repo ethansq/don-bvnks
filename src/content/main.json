@@ -27,5 +27,63 @@
 		"Snapchat": "link_to_snap",
 		"SoundCloud": "link_to_sc",
 		"Spotify": "link_to_spotif"
-	}
+	},
+	"bookings": [
+		{
+			"date": "Oct 17",
+			"name": "tour_location_1",
+			"city": "c1",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com"
+		},
+		{
+			"date": "Nov 20",
+			"name": "tour_location_2",
+			"city": "c2",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com"
+		},
+		{
+			"date": "Dec 23",
+			"name": "tour_location_3",
+			"city": "c3",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com"
+		},
+		{
+			"date": "Jan 26",
+			"name": "tour_location_4",
+			"city": "c4",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com"
+		},
+		{
+			"date": "Mar 1",
+			"name": "tour_location_5",
+			"city": "c5",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com"
+		},
+		{
+			"date": "Apr 4",
+			"name": "tour_location_6",
+			"city": "c6",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com"
+		},
+		{
+			"date": "May 7",
+			"name": "tour_location_7",
+			"city": "c7",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com"
+		}
+	]
 }
