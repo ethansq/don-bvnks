@@ -78,21 +78,21 @@
 }
 
 #bookings {
-	.tour-date-wrapper {
+	.booking-date-wrapper {
 		font-size:22px;
 
 		&:not(:last-child) {
 			margin-bottom:26px;
 		}
 
-		.tour-name {
+		.booking-name {
 			text-transform:uppercase;
 		}
 
-		.tour-callouts {
+		.booking-callouts {
 			margin-top:6px;
 
-			.tour-callout {
+			.booking-callout {
 				div {
 					display:inline-block;
 					transition:background 0.2s ease;

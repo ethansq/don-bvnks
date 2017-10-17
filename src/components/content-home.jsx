@@ -17,17 +17,17 @@ export default class ContentMain extends React.Component {
         );
 	}
 
-    renderTourDate(i, tourDateJson) {
+    renderBookingDate(i, bookingDateJson) {
         return (
-            <div key={i} className="tour-date-wrapper">
-                <span className="tour-name">{tourDateJson.name},&nbsp;</span>
-                <span className="tour-location">{tourDateJson.city+", "+tourDateJson.state},&nbsp;</span>
-                <span className="tour-date">{tourDateJson.date}</span>
-                <div className="tour-callouts">
-                    <a className="tour-callout" href={tourDateJson.moreInfo}>
+            <div key={i} className="booking-date-wrapper">
+                <span className="booking-name">{bookingDateJson.name},&nbsp;</span>
+                <span className="booking-location">{bookingDateJson.city+", "+bookingDateJson.state},&nbsp;</span>
+                <span className="booking-date">{bookingDateJson.date}</span>
+                <div className="booking-callouts">
+                    <a className="booking-callout" href={bookingDateJson.moreInfo}>
                         <div>TICKETS/INFO</div>
                     </a>
-                    <a className="tour-callout" href={tourDateJson.moreInfo}>
+                    <a className="booking-callout" href={bookingDateJson.moreInfo}>
                         <div>VIP</div>
                     </a>
                 </div>
@@ -54,7 +54,7 @@ export default class ContentMain extends React.Component {
         var tourDates = [];
         var numDates = bookingsJson.length;
         for (var i=0; i<numDates; i++) {
-            tourDates[i] = this.renderTourDate(i, bookingsJson[i]);
+            tourDates[i] = this.renderBookingDate(i, bookingsJson[i]);
         }
 
         return (
