@@ -20,7 +20,7 @@ $navbar-height: 40px;
 			width:calc(100% - 24px);
 			height:auto;
 			background:rgba(0,0,0,0.7);
-			z-index:5;
+			z-index:4;
 			transition:opacity 0.3s ease;
 
 			&.overlay-show {
@@ -48,7 +48,7 @@ $navbar-height: 40px;
 		height:$navbar-height;
 
 		.pill {
-			opacity:0.7;
+			opacity:0.8;
 			line-height:$navbar-height;
 			text-transform:uppercase;
 			width:auto;
@@ -59,10 +59,11 @@ $navbar-height: 40px;
 			color:#fff;
 
 			a {
+				transition:color 0.2s ease;
 				text-decoration:none;
-				color:#fff;
+				color:#eee;
 				&:hover {
-					color:#000;
+					color:#fff;
 				}
 			}
 
