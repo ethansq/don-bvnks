@@ -31,7 +31,7 @@
 	"bookings": [
 		{
 			"date": "Oct 17",
-			"name": "tour_location_1",
+			"name": "booking_location_1",
 			"city": "c1",
 			"state": "ON",
 			"link": "https://google.com",
@@ -39,7 +39,7 @@
 		},
 		{
 			"date": "Nov 20",
-			"name": "tour_location_2",
+			"name": "booking_location_2",
 			"city": "c2",
 			"state": "ON",
 			"link": "https://google.com",
@@ -47,7 +47,7 @@
 		},
 		{
 			"date": "Dec 23",
-			"name": "tour_location_3",
+			"name": "booking_location_3",
 			"city": "c3",
 			"state": "ON",
 			"link": "https://google.com",
@@ -55,7 +55,7 @@
 		},
 		{
 			"date": "Jan 26",
-			"name": "tour_location_4",
+			"name": "booking_location_4",
 			"city": "c4",
 			"state": "ON",
 			"link": "https://google.com",
@@ -63,7 +63,7 @@
 		},
 		{
 			"date": "Mar 1",
-			"name": "tour_location_5",
+			"name": "booking_location_5",
 			"city": "c5",
 			"state": "ON",
 			"link": "https://google.com",
@@ -71,7 +71,7 @@
 		},
 		{
 			"date": "Apr 4",
-			"name": "tour_location_6",
+			"name": "booking_location_6",
 			"city": "c6",
 			"state": "ON",
 			"link": "https://google.com",
@@ -79,7 +79,7 @@
 		},
 		{
 			"date": "May 7",
-			"name": "tour_location_7",
+			"name": "booking_location_7",
 			"city": "c7",
 			"state": "ON",
 			"link": "https://google.com",

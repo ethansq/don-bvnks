@@ -12,10 +12,10 @@ export default class NavigationBar extends React.Component {
 
 		this.state = {
 			destinations: [
-				"/contact",
-				"/merch",
-				"/about",
-				"/media"
+				"BOOKING",
+				"STORE",
+				"BIO",
+				"FANS"
 			]
 		}
 		console.log(this.state.destinations.length);
