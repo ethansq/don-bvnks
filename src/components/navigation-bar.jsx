@@ -16,9 +16,42 @@ export default class NavigationBar extends React.Component {
 				"STORE",
 				"BIO",
 				"FANS"
-			]
+			],
+			isLoginComponentOpen: false,
+			isOverlayNavComponentOpen: false
 		}
-		console.log(this.state.destinations.length);
+
+		this.toggleOverlayNavComponent = this.toggleOverlayNavComponent.bind(this);
+	}
+
+	/*
+	Not really a "toggle", but
+	*/
+	toggleOverlayNavComponent() {
+		// let {isOverlayNavComponentOpen} = this.state
+
+		// window.scrollY > this.prev ? !isHide && this.setState({isHide:true})
+		// : isHide && this.setState({isHide:false})
+
+		// this.prev = window.scrollY;
+		console.log(window.scrollY);
+		console.log(window.innerHeight);
+		this.setState({
+			isOverlayNavComponentOpen: window.scrollY >= window.innerHeight
+		})
+	}
+
+    componentDidMount(){
+		window.addEventListener('scroll', this.toggleOverlayNavComponent);
+    }
+    componentWillUnmount(){
+		window.removeEventListener('scroll', this.toggleOverlayNavComponent);
+    }
+
+	toggleLoginWidget() {
+	}
+
+	toggleDrawerNav() {
 	}
 
 	renderLink(i) {
@@ -28,6 +61,8 @@ export default class NavigationBar extends React.Component {
 	}
 
     render() {
+    	let showOverlayNav = this.state.isOverlayNavComponentOpen ? "overlay-show" : "overlay-hide";
+    	
     	var links = [];
         for (var i=0; i < this.state.destinations.length; i++) {
         	links.push(this.renderLink(i));
@@ -35,12 +70,23 @@ export default class NavigationBar extends React.Component {
 
         return (
             <div id="nav-bar">
-            	<div className="padding-wrapper">
+            	<div className="content main-nav">
 	            	<div className="icon">
 	            		<img src={require("../res/logo.png")} />
             		</div>
 		            <div className="nav">
 		            	{links}
+		            	<span className="vertical-divider">I</span>
+		            	<div className="pill enabled">Login</div>
+					</div>
+				</div>
+            	<div className={"content overlay-nav "+showOverlayNav}>
+	            	<div className="icon">
+	            		<img src={require("../res/logo.png")} />
+            		</div>
+		            <div className="nav">
+		            	{links}
+		            	<span className="vertical-divider">I</span>
 		            	<div className="pill enabled">Login</div>
 					</div>
 				</div>

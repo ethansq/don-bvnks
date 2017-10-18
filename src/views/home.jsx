@@ -8,23 +8,6 @@ import ContentMain from '../components/content-home';
 import Footer from '../components/footer';
 
 export default class Home extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            "isNavOpen": false
-        }
-
-        this.toggleNav = this.toggleNav.bind(this);
-    }
-
-    toggleNav() {
-        console.log("toggle");
-        this.setState({
-            "isNavOpen": !this.state.isNavOpen
-        })
-    }
-
     componentDidMount() {
         browserHistory.push('/');
     }

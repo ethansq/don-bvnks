@@ -110,9 +110,6 @@ export default class ContentMain extends React.Component {
                     <h1 className="header">STORE FEATURES</h1>
                     {storeFeatureItems}
                 </section>
-                <section className="">
-
-                </section>
         	</div>
         );
     }
