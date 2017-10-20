@@ -1,5 +1,5 @@
 .home.container {
-	width:80em;
+	width:60em;
 	margin:0 auto;
 	padding-top:32px;
 	padding-bottom:32px;
@@ -8,7 +8,11 @@
 	.header {
 		font-size:26px;
 		font-weight:400;
-		margin-bottom:16px;
+
+		padding-bottom:16px;
+		&.no-desc {
+			padding-bottom:32px;
+		}
 	}
 
 	.description {
@@ -17,21 +21,40 @@
 		margin-bottom:32px;
 	}
 
-	> section:not(:last-child) {
-		position:relative;
-	    padding-bottom:32px;
-	    margin-bottom:32px;
+	> section {
+		> div { width:100%; }
 
-		&:after {
-		    content:'';
-		    width:60%;
-		    border-bottom:solid 1px #fff;
-		    z-index:1;
-		    position:absolute;
-		    left:20%;
-		    bottom:0px;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		min-height:100vh;
+
+		&:not(:last-child) {
+			padding-top:32px;
+			padding-bottom:32px;
+		}
+
+		&:last-child {
+			padding-top:32px;
+			padding-bottom:64px;
 		}
 	}
+
+	// > section:not(:last-child) {
+	// 	position:relative;
+	//     padding-bottom:32px;
+	//     margin-bottom:32px;
+
+	// 	&:after {
+	// 	    content:'';
+	// 	    width:60%;
+	// 	    border-bottom:solid 1px #fff;
+	// 	    z-index:1;
+	// 	    position:absolute;
+	// 	    left:20%;
+	// 	    bottom:0px;
+	// 	}
+	// }
 }
 
 #video-feature {
@@ -57,7 +80,7 @@
 		.label {
 			font-size:20px;
 		}
-			
+
 		.callouts {
 			margin-top:12px;
 			margin-bottom:24px;
@@ -90,6 +113,9 @@
 }
 
 #bookings {
+	.bookings-list {
+	}
+
 	.booking-date-wrapper {
 		font-size:22px;
 
@@ -102,8 +128,12 @@
 		}
 
 		.booking-callouts {
+			display:inline-block;
+			margin-left:48px;
+
 			.booking-callout {
 				div {
+					vertical-align:text-bottom;
 					display:inline-block;
 					transition:background 0.2s ease;
 					transition:color 0.2s ease;
@@ -121,6 +151,10 @@
 				&:not(:last-child) {
 					margin-right:8px;
 				}
+			}
+
+			.booking-callout.no-vip {
+				display:none;
 			}
 		}
 	}

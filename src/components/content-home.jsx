@@ -20,6 +20,8 @@ export default class ContentMain extends React.Component {
 	}
 
     renderBookingDate(i, bookingDateJson) {
+        var hasVIP = bookingDateJson.vipLink == "" ? "no-vip" : "";
+
         return (
             <div key={i} className="booking-date-wrapper">
                 <span className="booking-name">{bookingDateJson.name},&nbsp;</span>
@@ -29,7 +31,7 @@ export default class ContentMain extends React.Component {
                     <a className="booking-callout" href={bookingDateJson.moreInfo}>
                         <div>TICKETS/INFO</div>
                     </a>
-                    <a className="booking-callout" href={bookingDateJson.moreInfo}>
+                    <a className={"booking-callout "+hasVIP} href={bookingDateJson.moreInfo}>
                         <div>VIP</div>
                     </a>
                 </div>
@@ -91,7 +93,7 @@ export default class ContentMain extends React.Component {
 
         return (
         	<div className="home container">
-                <section id="video-feature">
+                <section id="video-feature"><div>
             		<h1 className="header">{contentJson.header}</h1>
             		<h3 className="description">{this.innerHtml(contentJson.description)}</h3>
             		<div className="callout-wrapper">
@@ -101,15 +103,15 @@ export default class ContentMain extends React.Component {
     	        	<div className="video">
     					<iframe src="https://www.youtube.com/embed/SkeCUHypDso?rel=0" frameBorder="0" allowFullScreen></iframe>
     	        	</div>
-                </section>
-                <section id="bookings">
-                    <h1 className="header">BOOKINGS</h1>
+                </div></section>
+                <section id="bookings"><div>
+                    <h1 className="header no-desc">BOOKINGS</h1>
                     <div className="bookings-list">{bookingsDates}</div>
-                </section>
-                <section id="store-spotlight">
-                    <h1 className="header">STORE FEATURES</h1>
+                </div></section>
+                <section id="store-spotlight"><div>
+                    <h1 className="header no-desc">STORE FEATURES</h1>
                     {storeFeatureItems}
-                </section>
+                </div></section>
         	</div>
         );
     }

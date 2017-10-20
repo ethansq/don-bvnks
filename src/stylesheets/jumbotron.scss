@@ -2,13 +2,47 @@
 	width:100%;
 	height:100vh;
 
+	.slick-list {
+		padding-left:0px !important;
+		padding-right:0px !important;
+	}
+
 	.slick-dots {
+		li button:hover:before {
+			color:#fff !important;
+		}
+
+		li button:before {
+			color:#fff !important;
+		}
+
+		li.slick-active button:before {
+			color:#fff !important;
+		}
+
 		bottom:32px !important;
 	}
 
 	.container {
 		height:100vh;
 		position:relative;
+
+		.react-parallax-bgimage {
+			// &:after {
+			// 	content:"";
+			// 	width:100%;
+			// 	height:100%;
+			// 	background:rgba(0,0,0,0.7);
+			// }
+		}
+
+		.react-parallax-content {
+			position:relative;
+			width:100%;
+			height:100vh;
+
+			background:rgba(0,0,0,0.4)
+		}
 
 		.title {
 			position: absolute;

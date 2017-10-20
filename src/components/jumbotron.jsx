@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { Parallax, Background } from 'react-parallax';
 
 function Slide(props) {
 	return (
@@ -27,9 +28,9 @@ export default class Jumbotron extends React.Component {
 	  	var settings = {
 	    	dots:true,
 	    	adaptiveHeight:false,
-	    	autoplay:true,
+	    	autoplay:false,
 	    	autoplaySpeed:3250,
-	    	centerMode:true,
+	    	centerMode:false,
 	    	draggable:false
 	    };
 
@@ -44,7 +45,9 @@ export default class Jumbotron extends React.Component {
 			<div id="jumbotron">
 				<Slider {...settings}>
 					<div className="container">
-						<div className="title">don-bvnks</div>
+				        <Parallax bgImage={require("../res/aerial.jpg")} strength={250}>
+							<div className="title">don-bvnks</div>							
+						</Parallax>
 					</div>
 					<div className="container">
 						<div className="title">don-bvnks</div>

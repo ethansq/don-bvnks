@@ -35,6 +35,14 @@ $navbar-height: 40px;
 
 	.icon {
 		float:left;
+		
+		div {
+			color:#fff;
+			width:$navbar-height;
+			line-height:$navbar-height;
+			text-align:center;
+			font-size:22px;
+		}
 
 		img {
 			vertical-align:top;

@@ -31,59 +31,75 @@
 	"bookings": [
 		{
 			"date": "Oct 17",
-			"name": "booking_location_1",
-			"city": "c1",
+			"name": "Starlight Social Club",
+			"city": "Waterloo",
 			"state": "ON",
 			"link": "https://google.com",
-			"moreInfo": "https://youtube.com"
+			"moreInfo": "https://youtube.com",
+			"vipLink": "https://google.com"
 		},
 		{
 			"date": "Nov 20",
-			"name": "booking_location_2",
-			"city": "c2",
+			"name": "Brixton Social",
+			"city": "Waterloo",
 			"state": "ON",
 			"link": "https://google.com",
-			"moreInfo": "https://youtube.com"
+			"moreInfo": "https://youtube.com",
+			"vipLink": "https://google.com"
 		},
 		{
 			"date": "Dec 23",
-			"name": "booking_location_3",
-			"city": "c3",
+			"name": "Rebel",
+			"city": "Toronto",
 			"state": "ON",
 			"link": "https://google.com",
-			"moreInfo": "https://youtube.com"
+			"moreInfo": "https://youtube.com",
+			"vipLink": ""
 		},
 		{
 			"date": "Jan 26",
-			"name": "booking_location_4",
-			"city": "c4",
+			"name": "Lost and Found",
+			"city": "Toronto",
 			"state": "ON",
 			"link": "https://google.com",
-			"moreInfo": "https://youtube.com"
+			"moreInfo": "https://youtube.com",
+			"vipLink": ""
 		},
 		{
 			"date": "Mar 1",
-			"name": "booking_location_5",
-			"city": "c5",
-			"state": "ON",
+			"name": "Stereo After Hours",
+			"city": "Montreal",
+			"state": "QC",
 			"link": "https://google.com",
-			"moreInfo": "https://youtube.com"
+			"moreInfo": "https://youtube.com",
+			"vipLink": "https://google.com"
 		},
 		{
 			"date": "Apr 4",
-			"name": "booking_location_6",
-			"city": "c6",
+			"name": "Cake Nightclub",
+			"city": "Toronto",
 			"state": "ON",
 			"link": "https://google.com",
-			"moreInfo": "https://youtube.com"
+			"moreInfo": "https://youtube.com",
+			"vipLink": ""
 		},
 		{
 			"date": "May 7",
-			"name": "booking_location_7",
-			"city": "c7",
+			"name": "Everleigh",
+			"city": "Toronto",
 			"state": "ON",
 			"link": "https://google.com",
-			"moreInfo": "https://youtube.com"
+			"moreInfo": "https://youtube.com",
+			"vipLink": "https://google.com"
+		},
+		{
+			"date": "June 8",
+			"name": "Electric Zoo",
+			"city": "New York",
+			"state": "NY",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com",
+			"vipLink": ""
 		}
 	]
 }

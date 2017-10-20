@@ -28,14 +28,8 @@ export default class NavigationBar extends React.Component {
 	Not really a "toggle", but
 	*/
 	toggleOverlayNavComponent() {
-		// let {isOverlayNavComponentOpen} = this.state
-
-		// window.scrollY > this.prev ? !isHide && this.setState({isHide:true})
-		// : isHide && this.setState({isHide:false})
-
-		// this.prev = window.scrollY;
-		console.log(window.scrollY);
-		console.log(window.innerHeight);
+		// console.log(window.scrollY);
+		// console.log(window.innerHeight);
 		this.setState({
 			isOverlayNavComponentOpen: window.scrollY >= window.innerHeight
 		})
@@ -71,9 +65,10 @@ export default class NavigationBar extends React.Component {
         return (
             <div id="nav-bar">
             	<div className="content main-nav">
-	            	<div className="icon">
+	            	<div className="icon" style={{display:"none"}}>
 	            		<img src={require("../res/logo.png")} />
             		</div>
+            		<div className="icon"><div>dB</div></div>
 		            <div className="nav">
 		            	{links}
 		            	<span className="vertical-divider">I</span>
@@ -81,9 +76,10 @@ export default class NavigationBar extends React.Component {
 					</div>
 				</div>
             	<div className={"content overlay-nav "+showOverlayNav}>
-	            	<div className="icon">
+	            	<div className="icon" style={{display:"none"}}>
 	            		<img src={require("../res/logo.png")} />
             		</div>
+            		<div className="icon"><div>dB</div></div>
 		            <div className="nav">
 		            	{links}
 		            	<span className="vertical-divider">I</span>
