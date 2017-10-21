@@ -13,7 +13,7 @@ export default class Home extends React.Component {
         super();
 
         this.state = {
-            isLoginComponentOpen: false,
+            isLoginComponentOpen: true,
             loginComponentAnimationDone: true
         }
 
@@ -33,7 +33,7 @@ export default class Home extends React.Component {
             this.setState({
                 loginComponentAnimationDone: true
             });
-        }, 700);
+        }, 500);
     }
 
     componentDidMount() {
