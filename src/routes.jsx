@@ -3,7 +3,6 @@ import { Route, IndexRoute } from 'react-router';
 import App from './app';
 import UnderConstruction from "./components/under-construction";
 import Home from './views/home';
-import Bio from './views/bio';
 
 export default (
   <Route path='/' component={App}>
