@@ -1,65 +1,47 @@
 import React, { Component } from "react";
-
-function Link(props) {
-	return (
-		<div className="pill enabled"><a href={props.href}>{props.href}</a></div>		
-	);
-}
+const navigationJson = require("../content/navigation.json");
 
 export default class NavigationBar extends React.Component {
 	constructor() {
 		super();
 
 		this.state = {
-			destinations: [
-				"BOOKING",
-				"STORE",
-				"BIO",
-				"FANS"
-			],
-			isLoginComponentOpen: false,
 			isOverlayNavComponentOpen: false
 		}
 
 		this.toggleOverlayNavComponent = this.toggleOverlayNavComponent.bind(this);
 	}
 
-	/*
-	Not really a "toggle", but
-	*/
 	toggleOverlayNavComponent() {
-		// console.log(window.scrollY);
-		// console.log(window.innerHeight);
 		this.setState({
 			isOverlayNavComponentOpen: window.scrollY >= window.innerHeight
 		})
 	}
 
-    componentDidMount(){
+    componentDidMount() {
 		window.addEventListener('scroll', this.toggleOverlayNavComponent);
+    	
     }
-    componentWillUnmount(){
+
+    componentWillUnmount() {
 		window.removeEventListener('scroll', this.toggleOverlayNavComponent);
     }
 
-	toggleLoginWidget() {
-	}
-
-	toggleDrawerNav() {
-	}
-
-	renderLink(i) {
+	renderLink(i, name, href) {
 		return (
-			<Link key={i} href={this.state.destinations[i]} />
+			<a className="pill-anchor" key={i} href={href}><div className="pill enabled">{name}</div></a>
 		);
 	}
 
     render() {
     	let showOverlayNav = this.state.isOverlayNavComponentOpen ? "overlay-show" : "overlay-hide";
     	
-    	var links = [];
-        for (var i=0; i < this.state.destinations.length; i++) {
-        	links.push(this.renderLink(i));
+        // FOOTER LINKS
+        var linksJson = navigationJson.navLinks;
+        var n = Object.keys(linksJson).length;
+        var links = [];
+        for (var i=0; i<n; i++) {
+            links[i] = this.renderLink(i, Object.keys(linksJson)[i], linksJson[Object.keys(linksJson)[i]]);
         }
 
         return (
@@ -72,7 +54,7 @@ export default class NavigationBar extends React.Component {
 		            <div className="nav">
 		            	{links}
 		            	<span className="vertical-divider">I</span>
-		            	<div className="pill enabled">Login</div>
+		            	<div onClick={this.props.onToggleLoginComponent} className="pill-anchor pill enabled">Login</div>
 					</div>
 				</div>
             	<div className={"content overlay-nav "+showOverlayNav}>
@@ -83,7 +65,7 @@ export default class NavigationBar extends React.Component {
 		            <div className="nav">
 		            	{links}
 		            	<span className="vertical-divider">I</span>
-		            	<div className="pill enabled">Login</div>
+		            	<div onClick={this.props.onToggleLoginComponent} className="pill-anchor pill enabled">Login</div>
 					</div>
 				</div>
             </div>

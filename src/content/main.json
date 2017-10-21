@@ -7,17 +7,6 @@
 		"Soundcloud": "https://soundcloud.com/",
 		"Google Play": "https://google.com/"
 	},
-	"navLinks": {
-
-	},
-	"footerLinks": {
-		"News": "News",
-		"Events": "Events",
-		"Photos": "Photos",
-		"Media": "Media",
-		"Merch": "Merch",
-		"LOGIN / REGISTER": "LOGIN / REGISTER"
-	},
 	"socialMediaLinks": {
 		"Facebook": "link_to_fb",
 		"Twitter": "link_to_twit",
@@ -27,79 +16,5 @@
 		"Snapchat": "link_to_snap",
 		"SoundCloud": "link_to_sc",
 		"Spotify": "link_to_spotif"
-	},
-	"bookings": [
-		{
-			"date": "Oct 17",
-			"name": "Starlight Social Club",
-			"city": "Waterloo",
-			"state": "ON",
-			"link": "https://google.com",
-			"moreInfo": "https://youtube.com",
-			"vipLink": "https://google.com"
-		},
-		{
-			"date": "Nov 20",
-			"name": "Brixton Social",
-			"city": "Waterloo",
-			"state": "ON",
-			"link": "https://google.com",
-			"moreInfo": "https://youtube.com",
-			"vipLink": "https://google.com"
-		},
-		{
-			"date": "Dec 23",
-			"name": "Rebel",
-			"city": "Toronto",
-			"state": "ON",
-			"link": "https://google.com",
-			"moreInfo": "https://youtube.com",
-			"vipLink": ""
-		},
-		{
-			"date": "Jan 26",
-			"name": "Lost and Found",
-			"city": "Toronto",
-			"state": "ON",
-			"link": "https://google.com",
-			"moreInfo": "https://youtube.com",
-			"vipLink": ""
-		},
-		{
-			"date": "Mar 1",
-			"name": "Stereo After Hours",
-			"city": "Montreal",
-			"state": "QC",
-			"link": "https://google.com",
-			"moreInfo": "https://youtube.com",
-			"vipLink": "https://google.com"
-		},
-		{
-			"date": "Apr 4",
-			"name": "Cake Nightclub",
-			"city": "Toronto",
-			"state": "ON",
-			"link": "https://google.com",
-			"moreInfo": "https://youtube.com",
-			"vipLink": ""
-		},
-		{
-			"date": "May 7",
-			"name": "Everleigh",
-			"city": "Toronto",
-			"state": "ON",
-			"link": "https://google.com",
-			"moreInfo": "https://youtube.com",
-			"vipLink": "https://google.com"
-		},
-		{
-			"date": "June 8",
-			"name": "Electric Zoo",
-			"city": "New York",
-			"state": "NY",
-			"link": "https://google.com",
-			"moreInfo": "https://youtube.com",
-			"vipLink": ""
-		}
-	]
+	}
 }

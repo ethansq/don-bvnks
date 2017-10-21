@@ -1,0 +1,76 @@
+{
+	"bookings": [
+		{
+			"date": "Oct 17",
+			"name": "Starlight Social Club",
+			"city": "Waterloo",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com",
+			"vipLink": "https://google.com"
+		},
+		{
+			"date": "Nov 20",
+			"name": "Brixton Social",
+			"city": "Waterloo",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com",
+			"vipLink": "https://google.com"
+		},
+		{
+			"date": "Dec 23",
+			"name": "Rebel",
+			"city": "Toronto",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com",
+			"vipLink": ""
+		},
+		{
+			"date": "Jan 26",
+			"name": "Lost and Found",
+			"city": "Toronto",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com",
+			"vipLink": ""
+		},
+		{
+			"date": "Mar 1",
+			"name": "Stereo After Hours",
+			"city": "Montreal",
+			"state": "QC",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com",
+			"vipLink": "https://google.com"
+		},
+		{
+			"date": "Apr 4",
+			"name": "Cake Nightclub",
+			"city": "Toronto",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com",
+			"vipLink": ""
+		},
+		{
+			"date": "May 7",
+			"name": "Everleigh",
+			"city": "Toronto",
+			"state": "ON",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com",
+			"vipLink": "https://google.com"
+		},
+		{
+			"date": "June 8",
+			"name": "Electric Zoo",
+			"city": "New York",
+			"state": "NY",
+			"link": "https://google.com",
+			"moreInfo": "https://youtube.com",
+			"vipLink": ""
+		}
+	]
+}

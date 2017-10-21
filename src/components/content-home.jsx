@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import ReactHtmlParser from 'react-html-parser';
 
 const contentJson = require('../content/main.json');
-const bookingsJson = contentJson.bookings;
+var bookingsJson = require('../content/bookings.json');
+bookingsJson = bookingsJson.bookings;
 const storeJson = require('../content/store.json');
 
 export default class ContentMain extends React.Component {

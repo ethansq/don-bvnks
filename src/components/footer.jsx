@@ -2,6 +2,7 @@ import React, { Component } from "react";
 var FontAwesome = require('react-fontawesome');
 const contentJson = require('../content/main.json');
 const dictionary = require('../content/dictionary.json');
+const navigationJson = require("../content/navigation.json");
 
 export default class Footer extends React.Component {
     constructor() {
@@ -45,19 +46,25 @@ export default class Footer extends React.Component {
         }
     }
 
-    renderFooterLink(i, name) {
-        return (
-            <a href="" key={i}>{name}</a>
-        );
+    renderFooterLink(i, name, href) {
+        if (href=="openLoginWidget") {
+            return (
+                <span onClick={this.props.onToggleLoginComponent} key={i}>{name}</span>
+            );
+        } else {
+            return (
+                <a href={href} key={i}>{name}</a>
+            );
+        }
     }
 
     render() {
         // FOOTER LINKS
-        var footerLinks = contentJson.footerLinks;
+        var footerLinks = navigationJson.footerLinks;
         var n = Object.keys(footerLinks).length;
         var links = [];
         for (var i=0; i<n; i++) {
-            links[i] = this.renderFooterLink(i, footerLinks[Object.keys(footerLinks)[i]]);
+            links[i] = this.renderFooterLink(i, Object.keys(footerLinks)[i], footerLinks[Object.keys(footerLinks)[i]]);
         }
 
         // SOCIAL MEDIA ICONS

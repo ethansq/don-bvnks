@@ -1,4 +1,5 @@
-$background-color: #AAA;
+$background-color: #aaa;
+$off-white: #ddd;
 
 body, html {
 	overflow-x:hidden;
@@ -29,3 +30,4 @@ a {
 @import 'font-awesome.min';
 @import 'contact', 'home', 'navigation-bar', 'jumbotron', 'content-main';
 @import 'footer';
+@import 'login-component';

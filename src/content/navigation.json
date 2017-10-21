@@ -1,0 +1,16 @@
+{
+	"navLinks": {
+		"Booking": "/booking",
+		"Store": "/store",
+		"Bio": "/bio",
+		"Fans": "/fans"
+	},
+	"footerLinks": {
+		"Booking": "/booking",
+		"Store": "/store",
+		"Bio": "/bio",
+		"Fans": "/fans",
+		"Media": "/media",
+		"LOGIN / REGISTER": "openLoginWidget"
+	}
+}

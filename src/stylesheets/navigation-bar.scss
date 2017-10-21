@@ -54,6 +54,17 @@ $navbar-height: 40px;
 	.nav {
 		float:right;
 		height:$navbar-height;
+	
+		.pill-anchor {
+			cursor:pointer;
+			
+			&:not(:last-child) {
+				margin-right:12px;
+			}
+			&:last-child {
+				margin-left:12px;
+			}
+		}
 
 		.pill {
 			opacity:0.8;
@@ -66,20 +77,11 @@ $navbar-height: 40px;
 			font-size:12px;
 			color:#fff;
 
-			a {
-				transition:color 0.2s ease;
-				text-decoration:none;
-				color:#eee;
-				&:hover {
-					color:#fff;
-				}
-			}
-
-			&:not(:last-child) {
-				margin-right:12px;
-			}
-			&:last-child {
-				padding-left:12px;
+			transition:color 0.2s ease;
+			text-decoration:none;
+			color:#eee;
+			&:hover {
+				color:#fff;
 			}
 		}
 

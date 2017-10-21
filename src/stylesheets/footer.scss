@@ -23,7 +23,11 @@ footer {
 	}
 
 	.links {
-		a {
+		a, span {
+			transition:color 0.3s ease;
+			transition:opacity 0.3s ease;
+			color:#eee;
+			cursor:pointer;
 			font-size:18px;
 			text-decoration:none;
 			text-transform:uppercase;
