@@ -45,7 +45,7 @@ export default class Jumbotron extends React.Component {
 			<div id="jumbotron">
 				<Slider {...settings}>
 					<div className="container">
-				        <Parallax bgImage={require("../res/aerial.jpg")} strength={250}>
+				        <Parallax bgImage={require("../res/aerial.jpg")} strength={325}>
 							<div className="title">don-bvnks</div>							
 						</Parallax>
 					</div>
