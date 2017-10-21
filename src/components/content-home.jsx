@@ -71,6 +71,15 @@ export default class ContentMain extends React.Component {
 		return ReactHtmlParser(str);
 	}
 
+    componentWillMount() {
+        const twitterScript = document.createElement("script");
+        twitterScript.src = "https://platform.twitter.com/widgets.js";
+        twitterScript.charset = "UTF-8";
+        twitterScript.async = true;
+
+        document.body.appendChild(twitterScript);
+    }
+
     render() {
     	var calloutsJson = contentJson.calloutLinks;
     	var numCallouts = Object.keys(calloutsJson).length;
@@ -111,6 +120,13 @@ export default class ContentMain extends React.Component {
                 <section id="store-spotlight"><div>
                     <h1 className="header no-desc">STORE FEATURES</h1>
                     {storeFeatureItems}
+                </div></section>
+                <section id="social-media-widgets"><div>
+                    <div className="twitter">
+                    <a className="twitter-timeline" width="50%" height="450px" href="https://twitter.com/CB_DREAMSZ?ref_src=twsrc%5Etfw">Tweets by CB_DREAMSZ</a>
+                    </div>
+                    <div className="instagram">
+                    </div>
                 </div></section>
         	</div>
         );

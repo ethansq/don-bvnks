@@ -22,7 +22,7 @@ export default class Footer extends React.Component {
     }
 
     handleSubmit(event) {
-        alert("Email was submitted: "+this.state.value);
+        alert("Email was submitted: "+this.state.subscribeEmail);
         event.preventDefault();
     }
 
