@@ -44,12 +44,16 @@ export default class ContentMain extends React.Component {
     renderStoreFeaturesItem(i) {
         const item = storeJson.items[i];
         return (
-            <div key={i} className="item-wrapper">
-                <img src={require("../res/image-sq.png")} />
-                <div className="item-name">{item.name}</div>
-                <a className="callout" href={item.calloutLink} target="_blank">
-                    <div>PURCHASE</div>
-                </a>
+            <div key={i}>
+                <div key={i} className="item-wrapper">
+                    <img src={require("../res/image-sq.png")} />
+                </div>
+                <div className="item-wrapper">
+                    <div className="item-name">{item.name}</div>
+                    <a className="callout" href={item.calloutLink} target="_blank">
+                        <div>PURCHASE</div>
+                    </a>
+                </div>
             </div>
         );
     }
@@ -99,7 +103,7 @@ export default class ContentMain extends React.Component {
             bookingsDates[i] = this.renderBookingDate(i, bookingsJson[i]);
         }
 
-        var storeFeatureItems = this.renderStoreFeatures(3);
+        var storeFeatureItems = this.renderStoreFeatures(4);
 
         return (
         	<div className="home container">
@@ -118,11 +122,8 @@ export default class ContentMain extends React.Component {
                     <h1 className="header no-desc">BOOKINGS</h1>
                     <div className="bookings-list">{bookingsDates}</div>
                 </div></section>
-                <section id="store-spotlight"><div>
-                    <h1 className="header no-desc">STORE FEATURES</h1>
-                    {storeFeatureItems}
-                </div></section>
                 <section id="social-media-widgets"><div>
+                    <h1 className="header no-desc">SOCIAL MEDIA</h1>
                     <div className="twitter">
                     <a className="twitter-timeline" width="50%" height="450px" href="https://twitter.com/CB_DREAMSZ?ref_src=twsrc%5Etfw">Tweets by CB_DREAMSZ</a>
                     </div>
