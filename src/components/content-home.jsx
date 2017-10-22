@@ -43,16 +43,18 @@ export default class ContentMain extends React.Component {
     // Generate Store feature items
     renderStoreFeaturesItem(i) {
         const item = storeJson.items[i];
+        // Parse the item name into separate lines
+
         return (
-            <div key={i}>
-                <div key={i} className="item-wrapper">
+            <div key={i} className="item-wrapper">
+                <div className="item-image-wrapper">
                     <img src={require("../res/image-sq.png")} />
                 </div>
-                <div className="item-wrapper">
-                    <div className="item-name">{item.name}</div>
-                    <a className="callout" href={item.calloutLink} target="_blank">
-                        <div>PURCHASE</div>
-                    </a>
+                <div className="hover-overlay"></div>
+                <div className="name-overlay">
+                    <span className="name">{item.name}</span>
+                    <br/>
+                    <span className="price">${item.price.toFixed(2)}</span>
                 </div>
             </div>
         );
@@ -103,7 +105,8 @@ export default class ContentMain extends React.Component {
             bookingsDates[i] = this.renderBookingDate(i, bookingsJson[i]);
         }
 
-        var storeFeatureItems = this.renderStoreFeatures(4);
+        var numStoreItems = 4;
+        var storeFeatureItems = this.renderStoreFeatures(numStoreItems);
 
         return (
         	<div className="home container">
@@ -122,13 +125,24 @@ export default class ContentMain extends React.Component {
                     <h1 className="header no-desc">BOOKINGS</h1>
                     <div className="bookings-list">{bookingsDates}</div>
                 </div></section>
+                <section id="store-spotlight"><div>
+                    <h1 className="header no-desc">STORE</h1>
+                    {storeFeatureItems}
+                    <div className="more">
+                        <a href="/store">Browse More</a>
+                        <button href="/store" className="subscibe-submit-button arrow" value="Submit" />
+                    </div>
+                </div></section>
                 <section id="social-media-widgets"><div>
                     <h1 className="header no-desc">SOCIAL MEDIA</h1>
                     <div className="twitter">
-                    <a className="twitter-timeline" width="50%" height="450px" href="https://twitter.com/CB_DREAMSZ?ref_src=twsrc%5Etfw">Tweets by CB_DREAMSZ</a>
+                    <a className="twitter-timeline" width="100%" height="450px" href="https://twitter.com/CB_DREAMSZ?ref_src=twsrc%5Etfw">Tweets by CB_DREAMSZ</a>
                     </div>
                     <div className="instagram">
                     </div>
+                </div></section>
+                <section id="share-us"><div>
+                    <h1 className="header no-desc">SHARE US</h1>
                 </div></section>
         	</div>
         );

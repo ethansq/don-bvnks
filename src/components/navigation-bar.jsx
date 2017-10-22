@@ -14,7 +14,7 @@ export default class NavigationBar extends React.Component {
 
 	toggleOverlayNavComponent() {
 		this.setState({
-			isOverlayNavComponentOpen: window.scrollY >= window.innerHeight
+			isOverlayNavComponentOpen: window.scrollY >= 64
 		})
 	}
 
