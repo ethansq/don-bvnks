@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 var FontAwesome = require('react-fontawesome');
-const contentJson = require('../content/main.json');
 const dictionary = require('../content/dictionary.json');
 const navigationJson = require("../content/navigation.json");
 
@@ -69,7 +68,7 @@ export default class Footer extends React.Component {
 
         // SOCIAL MEDIA ICONS
         var socialMediaIcons = [];
-        var socialMediaIconsJson = contentJson.socialMediaLinks;
+        var socialMediaIconsJson = navigationJson.socialMediaLinks;
         var numIcons = Object.keys(socialMediaIconsJson).length;
         for (var i=0; i<n; i++) {
             socialMediaIcons[i] = this.renderSocialMediaIcon(
