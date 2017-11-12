@@ -14,13 +14,9 @@
 		"LOGIN / REGISTER": "openLoginWidget"
 	},
 	"socialMediaLinks": {
-		"Facebook": "link_to_fb",
-		"Twitter": "link_to_twit",
-		"Instagram": "link_to_insta",
-		"Google+": "link_to_goog",
-		"YouTube": "link_to_yt",
-		"Snapchat": "link_to_snap",
-		"SoundCloud": "link_to_sc",
-		"Spotify": "link_to_spotif"
+		"Facebook": "https://www.facebook.com/whosdatbvnks/",
+		"Twitter": "https://twitter.com/CB_DREAMSZ",
+		"Instagram": "https://www.instagram.com/whosdatbvnks/",
+		"SoundCloud": "https://soundcloud.com/whosdatbvnks"
 	}
 }

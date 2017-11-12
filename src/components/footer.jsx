@@ -28,6 +28,7 @@ export default class Footer extends React.Component {
 
     renderSocialMediaIcon(name) {
         var iconName = dictionary[name];
+        console.log(name);
         if (iconName) {
             return (
                 <a className="icon-anchor" href="" key={name}>
@@ -66,15 +67,25 @@ export default class Footer extends React.Component {
             links[i] = this.renderFooterLink(i, Object.keys(footerLinks)[i], footerLinks[Object.keys(footerLinks)[i]]);
         }
 
-        // SOCIAL MEDIA ICONS
-        var socialMediaIcons = [];
-        var socialMediaIconsJson = navigationJson.socialMediaLinks;
-        var numIcons = Object.keys(socialMediaIconsJson).length;
-        for (var i=0; i<n; i++) {
-            socialMediaIcons[i] = this.renderSocialMediaIcon(
-                Object.keys(socialMediaIconsJson)[i]
-            );
-        }
+        var socialMediaLinks = navigationJson.socialMediaLinks;
+        var socialMediaIcons = Object.keys(socialMediaLinks).map((key, i) => {           
+            var iconName = dictionary[key];
+            if (iconName) {
+                var href = socialMediaLinks[Object.keys(socialMediaLinks)[i]];
+                return (
+                    <a className="icon-anchor" href={href} key={i}>
+                        <div className="icon-wrapper">
+                            <FontAwesome
+                                size='2x'
+                                inverse={true}
+                                name={iconName} />
+                        </div>
+                    </a>
+                );
+            } else {
+                return null;
+            }
+        });
 
         return (
             <footer>

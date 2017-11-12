@@ -116,7 +116,8 @@ export default class ContentMain extends React.Component {
                 <div className="twitter">
                 <a className="twitter-timeline" width="100%" height="450px" href="https://twitter.com/CB_DREAMSZ?ref_src=twsrc%5Etfw">Tweets by CB_DREAMSZ</a>
                 </div>
-                <div className="instagram">
+                <div className="fb-embed">
+                    <div className="fb-page" data-href="https://www.facebook.com/whosdatbvnks/" data-tabs="timeline" data-width="400" data-height="450" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-colorscheme="dark" data-show-facepile="false"><blockquote cite="https://www.facebook.com/whosdatbvnks/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/whosdatbvnks/">Don Bvnks Music</a></blockquote></div>
                 </div>
             </div></section>
         );
