@@ -7,6 +7,8 @@ export default class NavigationBar extends React.Component {
 		super(props);
 
 		this.toggleOverlayNavComponent = this.toggleOverlayNavComponent.bind(this);
+		this.handleAuthentication = this.handleAuthentication.bind(this);
+		this.firebaseSignOut = this.firebaseSignOut.bind(this);
 
 		/**
 		 * Default state; we update "default" values when onAuthStateChanged
@@ -14,18 +16,24 @@ export default class NavigationBar extends React.Component {
 		 */
 		this.state = {
 			isOverlayNavComponentOpen: false,
+			isWaitingForAuth: true,
 			isAuthenticated: false,
 			currentUserName: ""
 		};
 
 		firebase.auth().onAuthStateChanged(user => {
 			if (user) {
+				console.log("Constructor> authenticated");
 				this.setState({
+					isWaitingForAuth: false,
 					isAuthenticated: true,
 					currentUserName: user.displayName
 				});
 			} else {
-				console.log("constructor> not authenticated");
+				console.log("Constructor> not authenticated");
+				this.setState({
+					isWaitingForAuth: false
+				});
 			}
 		});
 	}
@@ -53,6 +61,31 @@ export default class NavigationBar extends React.Component {
 		);
 	}
 
+	/**
+	 * Scope-wise, this shouldn't be here
+	 */
+	firebaseSignOut() {
+        firebase.auth().signOut().then(() => {
+            // Sign-out successful.
+			console.log("Sign out> success");
+			this.setState({
+				isAuthenticated: false,
+				currentUserName: ""
+			});
+        }).catch(function(error) {
+            console.log(error);
+            // An error happened.
+        });
+	}
+	
+	handleAuthentication() {
+		if (this.state.isAuthenticated) {
+			this.firebaseSignOut();
+		} else {
+			this.props.onToggleLoginComponent();
+		}
+	}
+
     render() {
     	let showOverlayNav = this.state.isOverlayNavComponentOpen ? "overlay-show" : "overlay-hide";
     	
@@ -72,22 +105,41 @@ export default class NavigationBar extends React.Component {
             		</div>
             		<div className="icon"><div>dB</div></div>
 		            <div className="nav">
-		            	{links}
+						{links}
 		            	<span className="vertical-divider">I</span>
-		            	<div onClick={this.props.onToggleLoginComponent} className="pill-anchor pill enabled login-btn">
+						<div className={"pill enabled loader-wrapper" + (this.state.isWaitingForAuth ? "" : " hidden")}>
+							<div className="loader"></div>
+						</div>
+						<div
+							className={"pill-anchor pill enabled" + (this.state.isWaitingForAuth || !this.state.isAuthenticated ? " hidden" : "")}>
+							{this.state.isAuthenticated ? "Profile" : ""}
+						</div>
+						<div 
+							onClick={this.handleAuthentication}
+							className={"pill-anchor pill enabled" + (this.state.isWaitingForAuth ? " hidden" : "")}>
 							{this.state.isAuthenticated ? "Sign Out" : "Login"}
 						</div>
 					</div>
 				</div>
-            	<div className={"content overlay-nav "+showOverlayNav}>
+            	<div
+					className={"content overlay-nav "+showOverlayNav}>
 	            	<div className="icon" style={{display:"none"}}>
 	            		<img src={require("../res/logo.png")} />
             		</div>
             		<div className="icon"><div>dB</div></div>
 		            <div className="nav">
-		            	{links}
+						{links}
 		            	<span className="vertical-divider">I</span>
-		            	<div onClick={this.props.onToggleLoginComponent} className="pill-anchor pill enabled login-btn">
+						<div className={"pill enabled loader-wrapper" + (this.state.isWaitingForAuth ? "" : " hidden")}>
+							<div className="loader"></div>
+						</div>
+						<div
+							className={"pill-anchor pill enabled" + (this.state.isWaitingForAuth || !this.state.isAuthenticated ? " hidden" : "")}>
+							{this.state.isAuthenticated ? "Profile" : ""}
+						</div>
+						<div
+							onClick={this.handleAuthentication}
+							className={"pill-anchor pill enabled" + (this.state.isWaitingForAuth ? " hidden" : "")}>
 							{this.state.isAuthenticated ? "Sign Out" : "Login"}
 						</div>
 					</div>

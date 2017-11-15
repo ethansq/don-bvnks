@@ -61,9 +61,6 @@ $navbar-height: 40px;
 			&:not(:last-child) {
 				margin-right:12px;
 			}
-			&:last-child {
-				margin-left:12px;
-			}
 		}
 
 		.pill {
@@ -80,15 +77,49 @@ $navbar-height: 40px;
 			transition:color 0.2s ease;
 			text-decoration:none;
 			color:#eee;
+
 			&:hover {
 				color:#fff;
+			}
+
+			&.hidden {
+				display:none;
 			}
 		}
 
 		.vertical-divider {
 			font-size:14px;
 			color:#999;
+			margin-right:12px;
 			line-height:$navbar-height;
 		}
 	}
+}
+
+.loader-wrapper {
+	vertical-align:text-bottom;
+
+	.loader {
+		border: 2px solid #f3f3f3;
+		border-radius: 50%;
+		border-top: 2px solid #3498db;
+		width: 14px;
+		height: 14px;
+		-webkit-animation: spin 2s linear infinite;
+		animation: spin 2s linear infinite;
+
+		&.hidden {
+			display:none;
+		}
+	}
+}
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }

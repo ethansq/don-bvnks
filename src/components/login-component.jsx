@@ -67,8 +67,6 @@ export default class LoginComponent extends React.Component {
 			// The signed-in user info.
 			var user = result.user;
 
-			console.log(firebase.auth().currentUser.displayName);
-
 		}).catch(function(error) {
 			console.log("Sign in> Failure> Error");
 			console.log(error);
@@ -80,7 +78,7 @@ export default class LoginComponent extends React.Component {
 			// The firebase.auth.AuthCredential type that was used.
 			var credential = error.credential;
 		});
-	}
+    }
 
     render() {
     	var showComponent = this.props.isOpen ? "show" : "hide";
