@@ -39,7 +39,6 @@ export default class ContentMain extends React.Component {
     }
 
     renderMusicLinks() {
-        console.log("Hello");
         return (
             <section id="music"><div>
                 <h1 className="header no-desc">MUSIC</h1>

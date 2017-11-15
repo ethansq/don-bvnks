@@ -7,6 +7,7 @@ import Jumbotron from '../components/jumbotron';
 import ContentMain from '../components/content-home';
 import Footer from '../components/footer';
 import LoginComponent from '../components/login-component';
+import * as firebase from 'firebase';
 
 export default class Home extends React.Component {
     constructor() {
@@ -34,6 +35,9 @@ export default class Home extends React.Component {
                 loginComponentAnimationDone: true
             });
         }, 500);
+    }
+
+    componentWillMount() {
     }
 
     componentDidMount() {

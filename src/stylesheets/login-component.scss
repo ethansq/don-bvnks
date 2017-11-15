@@ -1,5 +1,5 @@
 #login-component { /* animations and visuals */
-	width:550px;
+	width:300px;
 	height:100vh;
 	position:fixed;
 	right:0px;
@@ -26,85 +26,28 @@
 }
 
 #login-component { /* content */
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
 	.close-button {
 		cursor:pointer;
 		padding:26px;
 		position:absolute;
 		top:50%;
-		left:0px;
+		left:-50px;
 		-webkit-transform:translate(0, -50%);
 		transform:translate(0, -50%);
+
+		.fa-chevron-right {
+			font-size:18px;
+		}
 	}
 
-	display:flex;
-	justify-content:center;
-	align-items:center;
-
 	.content {
-		width:50%;
+		width:80%;
 		margin:0 auto;
-
-		form {
-			width:100%;
-			height:100%;
-
-			input[type="email"], input[type="password"] {
-				width:calc(100% - 16px);
-				height:32px;
-				display:block;
-				color:#333;
-				font-size:18px;
-				background:0 0;
-				padding:8px 8px;
-				border:1px rgba(0,0,0,0.3) solid;
-				line-height:32px;
-				margin-bottom:16px;
-			}
-
-			.remember {
-				text-align:center;
-				margin:0 auto;
-				margin-bottom:8px;
-
-				label {
-					color:#777;
-					text-transform:uppercase;
-					line-height:20px;
-					cursor:pointer;
-				}
-
-				input {
-					background:#fff;
-					width:20px;
-					height:20px;
-					margin-right:8px;
-					cursor:pointer;
-				}
-			}
-
-			.forgot {
-				width:100%;
-				line-height:20px;
-				text-align:center;
-				text-transform:uppercase;
-				padding-bottom:48px;
-				cursor:pointer;
-			}
-
-			.login-button {
-				width:100%;
-			    background-color: #4CAF50;
-			    border: none;
-			    color: white;
-			    padding: 15px 32px;
-			    text-align: center;
-			    text-decoration: none;
-			    display: inline-block;
-			    font-size: 16px;
-			    margin: 4px 2px;
-			    cursor: pointer;
-			}
-		}
+		position:relative;
 	}
 }
 
@@ -130,6 +73,68 @@
 		}
 		&.done {
 			visibility:hidden;
+		}
+	}
+}
+
+#login-component {
+	.privacy-policy {
+		cursor:pointer;
+		position:absolute;
+		bottom:8px;
+		width:100%;
+		text-align:center;
+		text-transform:uppercase;
+		font-size:10px;
+		color:#000;
+		opacity:0.7;
+	}
+}
+
+/*
+Login button(s)
+*/
+$fb-blue: #4468b0;
+$google-red: #e8453c;
+
+#login-component {
+	.login-btn {
+		cursor:pointer;
+		position: relative;
+		border-radius:4px;
+		padding:6px 8px;
+
+		&:hover {
+			opacity:0.9;
+		}
+
+		.login-text {
+			color:#fff;
+			font-family:Helvetica, Arial, sans-serif;
+			font-size:16px;
+			position: absolute;
+			padding-left:32px;
+			right:8px;
+			top:50%;
+			width:calc(100% - 40px);
+			text-align:center;
+			-webkit-transform: translate(0%, -50%);
+			transform: translate(0%, -50%);
+			height:auto;
+		}
+
+		&:not(:last-child) {
+			margin-bottom:16px;
+		}
+
+		&.fb-login {
+			background: $fb-blue;			
+		}
+
+		&.google-login {
+			cursor:no-drop;
+			opacity:0.4;
+			background: $google-red;
 		}
 	}
 }
